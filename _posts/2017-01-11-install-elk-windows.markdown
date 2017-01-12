@@ -3,9 +3,11 @@ layout: post
 title:  "How to install ELK on Windows"
 date:   2017-01-11 17:55:31 +0200
 categories: ELK devops windows .NET
+comments: true
+
 ---
 
-Usually no-one cares about logging in their applications until production. Only when
+Usually no-one cares about logs in their applications until production. Only when
 something bad happens one realizes that prod does not allow to debug and, like, "Where
 are our logs?" And then -- "Why don't our logs contain anything useful?". In this post
 we'll start with the first question. 
@@ -73,16 +75,16 @@ buttons in installers.
 
 So, back to this post title. How to install ELK? You just need to type:
 
-{% highlight bash %}
+{% highlight cmd %}
 cinst elasticsearch -y
 {% endhighlight %}
 
 At the moment of this writing elasticsearrch package is not smart enough to create 
 and start windows service, so you'd might need to do it manually:
 
-{% highlight bash %}
-pushd C:\ProgramData\chocolatey\lib\elasticsearch\tools\elasticsearch-2.3.1\bin
-service.bat install
+{% highlight cmd %}
+pushd C:\\ProgramData\chocolatey\lib\elasticsearch\tools\elasticsearch-2.3.1\bin
+service.bat install 
 service.bat start
 {% endhighlight %}
 
@@ -93,7 +95,7 @@ to copy that variable to appropriate level.
 
 And the next step is:
 
-{% highlight bash %}
+{% highlight cmd %}
 cinst kibana -y
 {% endhighlight %}
 
@@ -105,3 +107,5 @@ should be handled in 21st century. Less efforts -- more result. I really like it
 In the next post we'll set up ASP.NET Core logging to target ELK.
 
 Happy installing!
+
+{% include disqus.html %}
