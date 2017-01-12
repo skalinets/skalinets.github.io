@@ -107,5 +107,3 @@ should be handled in 21st century. Less efforts -- more result. I really like it
 In the next post we'll set up ASP.NET Core logging to target ELK.
 
 Happy installing!
-
-{% include disqus.html %}
