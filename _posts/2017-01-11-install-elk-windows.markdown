@@ -75,6 +75,8 @@ buttons in installers.
 
 So, back to this post title. How to install ELK? You just need to type:
 
+'{{ page.url | absolute_url }}'
+
 {% highlight cmd %}
 cinst elasticsearch -y
 {% endhighlight %}
