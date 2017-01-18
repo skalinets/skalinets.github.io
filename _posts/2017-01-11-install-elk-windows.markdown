@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to install ELK on Windows"
+title:  "Using ELK for Logging on Windows: Installation"
 date:   2017-01-11 17:55:31 +0200
 categories: ELK devops windows .NET
 comments: true
@@ -75,8 +75,6 @@ buttons in installers.
 
 So, back to this post title. How to install ELK? You just need to type:
 
-'{{ page.url | absolute_url }}'
-
 {% highlight cmd %}
 cinst elasticsearch -y
 {% endhighlight %}
@@ -106,6 +104,6 @@ install services and [so on]({{ site.url }}/assets/elastic-install-log.png). Mor
 we don't need to install JRE, JDE, NSSM explicitly. This is exactly how installation of things 
 should be handled in 21st century. Less efforts -- more result. I really like it.
 
-In the next post we'll set up ASP.NET Core logging to target ELK.
+In the next post we'll set up ASP.NET Core logging to target ELK. But first we need to define [additional moving parts](elk-filebeat-logstash) in out setup.
 
 Happy installing!

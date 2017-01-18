@@ -24,7 +24,10 @@ github_username:  skalinets
 disqus:
   shortname: skalinets-github-io
 google_analytics: UA-90284516-1
-
+github:
+  site:
+    url: https://skalinets.github.io
+repository: skalinets/skalinets.github.io
 environment: production
 
 
