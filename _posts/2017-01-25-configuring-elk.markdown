@@ -199,7 +199,7 @@ netsh advfirewall firewall add rule name="Allow incoming Kibana" protocol=tcp lo
 clicked and what commands should be typed in console). Console based is much faster. And if you
 found solution in internet can copy & paste script from site, while still would need to click through UI, guided by screenshots and instructions. But keep in mind that copied script can be [harmful](https://www.reddit.com/r/netsec/comments/1bv359/dont_copypaste_from_website_to_terminal_demo/).
 
-And that's done! Now we have distributed logging in place. 
+And that's all! Once all our services are started, we have our distributed logging working.
 
 
 
