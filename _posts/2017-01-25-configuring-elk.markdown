@@ -106,7 +106,7 @@ becomes a bottleneck. You can have more than one installed as well.
 We'll use [chocolatey](https://chocolatey.org/packages/logstash) here as usual:
 
 {% highlight cmd %}
-choco install logstash
+cinst logstash -version 5.1.2
 {% endhighlight %}
 
 This command installs Logstash and creates a service. Service is stopped by default and you should start it manually.
