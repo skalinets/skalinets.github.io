@@ -57,8 +57,9 @@ experience. This is what makes lives of Windows guys hard.
 Why I said "Windows guys"? Because Linux guys haven't ever heard about such problems. 
 They got something called package managers handling all installation plumbing work 
 for them. You probably noticed that installation instructions for Linux usually compact 
-to few lines of bash script. While instructions for Windows versions are full of 
-installer screenshots.
+to few lines of bash script that you can just paste into the terminal 
+([but be careful](https://www.reddit.com/r/netsec/comments/1bv359/dont_copypaste_from_website_to_terminal_demo/))
+.While instructions for Windows versions are full of installer screenshots.
 
 And now it's time for good news. In fact **there are** package managers for Windows.
 They are not official (and that's why most of Windows users are not aware of them),
