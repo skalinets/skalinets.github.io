@@ -76,14 +76,14 @@ buttons in installers.
 
 So, back to this post title. How to install ELK? You just need to type:
 
-{% highlight cmd %}
+{% highlight powershell %}
 cinst elasticsearch -y
 {% endhighlight %}
 
 At the moment of this writing elasticsearrch package is not smart enough to create 
 and start windows service, so you'd might need to do it manually:
 
-{% highlight cmd %}
+{% highlight powershell %}
 pushd C:\\ProgramData\chocolatey\lib\elasticsearch\tools\elasticsearch-2.3.1\bin
 service.bat install 
 service.bat start
@@ -96,8 +96,22 @@ to copy that variable to appropriate level.
 
 And the next step is:
 
-{% highlight cmd %}
+{% highlight powershell %}
 cinst kibana -y
+{% endhighlight %}
+
+For some reason kibana service is installed with manual startup type. So after server restart
+it will be stopped. However it can be easily fixed:
+
+{% highlight powershell %}
+set-service kibana-service -StartupType Automatic
+{% endhighlight %}
+
+BTW to quickly check what is the startup type of the service, or other info, you can use
+[NSSM](https://nssm.cc/):
+
+{% highlight powershell %}
+nssm edit kibana-service
 {% endhighlight %}
 
 And that's all! Behind the scenes it will download zips, unpack it, run registration scripts,
