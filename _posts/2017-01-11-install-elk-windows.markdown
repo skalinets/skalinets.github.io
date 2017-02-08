@@ -100,7 +100,8 @@ And the next step is:
 cinst kibana -y
 {% endhighlight %}
 
-For some reason kibana service is installed with manual startup type. So after server restart
+For [some reason](https://disqus.com/home/discussion/chocolatey/chocolatey_gallery_kibana_450/#comment-3142843787) 
+kibana service is installed with manual startup type. So after server restart
 it will be stopped. However it can be easily fixed:
 
 {% highlight powershell %}
@@ -112,6 +113,13 @@ BTW to quickly check what is the startup type of the service, or other info, you
 
 {% highlight powershell %}
 nssm edit kibana-service
+{% endhighlight %}
+
+Another non-obvious thing is that by default Kibana (and Elasticsearch) are bound to `localhost`
+that prevents connections from another host. To fix that you need to make changes in `kibana.yml`:
+
+{% highlight yaml %}
+server.host: "0.0.0.0"
 {% endhighlight %}
 
 And that's all! Behind the scenes it will download zips, unpack it, run registration scripts,
