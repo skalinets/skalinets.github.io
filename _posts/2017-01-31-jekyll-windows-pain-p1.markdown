@@ -46,4 +46,4 @@ __But I was far from the happy end...__
 
 _to be continued..._
 
-> Yes -- I also noticed that there are __Pain__ and __Jekyll__ in this post but  no __Windows__. It will be in the next part -- trust me :). 
+> Yes -- I also noticed that there are __Pain__ and __Jekyll__ in this post but  no __Windows__. It is be in the [next part](jekyll-windows-pain-p2). 
