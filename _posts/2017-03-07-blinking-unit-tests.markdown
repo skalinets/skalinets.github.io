@@ -64,7 +64,8 @@ public class BlinkingInside
 {
     public static readonly IEnumerable<object[]> Foo = Enumerable.Range(1, 1000).Select(i => new object[] { i });
 
-    private readonly int randomValue = new Random().Next(100);
+    private static Random rnd = new Random();
+    private readonly int randomValue = rnd.Next(100);
 
     [Theory]
     [MemberData(nameof(Foo))]
@@ -78,6 +79,8 @@ public class BlinkingInside
 Note that property or field used in `MemberData` should be `public static` and return `IEnumerable<object[]>`. 
 Another thing worth noting is that we added one argument to test method signature. Otherwise, all tests
 will fail. 
+
+> The first version of code snippet above contained a bug that is discussed in this [post](know-your-random).
 
 Once we reproduced failing test we can add any logging / debugging etc, fix the issue, check it with our
 multirunner and revert it back to `[Fact]`.
