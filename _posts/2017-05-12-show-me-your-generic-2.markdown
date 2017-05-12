@@ -5,7 +5,7 @@ title: Show Me Your Generic Part 2
 
 ---
 
-Only few hours had passed after I posted a post about misusing generics when I spotted
+Only few hours passed after I had posted a post about misusing generics when I spotted
 a real gem during the code review. Here it is:
 
 {% highlight csharp%}
