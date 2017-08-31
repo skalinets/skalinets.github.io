@@ -35,7 +35,7 @@ Cool, right? Here we have all sort of coolness: class level generics, method lev
         return GetTFromSomeWhere();
     }
 
-{% endhighlight %}
+{% endhighlight %}  
 
 Yes, exactly. We don't need method level generics here, because, you know, they only intention was to restrict an argument to be a subtype of some interface. And this can be achieved by just using proper signature.
 
