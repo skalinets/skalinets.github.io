@@ -1,10 +1,32 @@
+---
+
+layout: post
+title: "Spatial Pain with Entity Framework"
+date: 2017-09-05 12:00 +02:00
+categories: ELK devops windows .NET
+
+---
+
+In one of our project there is a requirement to sort addresses by the distance to one of them. We use Azure SQL Database
+as a storage and Entity Framework 6.1.3 as an ORM. 
+
+In 2017 all modern databases [seem](https://www.scribd.com/presentation/2569355/Geo-Distance-Search-with-MySQL) to support 
+spatial calculations so does Azure SQL Database. Moreover, Entity Framework also allows to use geo operations in its
+queries. After all it's just a bunch of [sines and cosines](https://www.scribd.com/presentation/2569355/Geo-Distance-Search-with-MySQL) -- nothing complicated, right?      
+
+
 post about spatial and entity framework
 
 calculations should be pretty simple: https://www.scribd.com/presentation/2569355/Geo-Distance-Search-with-MySQL
 
+First you get [crazy error](https://stackoverflow.com/questions/19551142/entitytype-dbgeography-has-no-key-defined), that 
+is caused by a wrong namespace in [Microsoft's tutorial](https://msdn.microsoft.com/en-us/data/hh859721). OK, thanks to 
+Stackoverflow, it's fixed.
 
-not working https://stackoverflow.com/questions/19551142/entitytype-dbgeography-has-no-key-defined
-https://msdn.microsoft.com/en-us/data/hh859721 has error in usings. But after change it still don't work.
+Next -- a new one. 
+{%highlight json%}
+error 2: {"Spatial types and functions are not available for this provider because the assembly 'Microsoft.SqlServer.Types' version 10 or higher could not be found. "}
+{%endhighlight%}
 
 error 1: 
 System.Data.Entity.ModelConfiguration.ModelValidationException was unhandled

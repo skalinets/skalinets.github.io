@@ -37,7 +37,8 @@ Cool, right? Here we have all sort of coolness: class level generics, method lev
 
 {% endhighlight %}  
 
-Yes, exactly. We don't need method level generics here, because, you know, they only intention was to restrict an argument to be a subtype of some interface. And this can be achieved by just using proper signature.
+Yes, exactly. We don't need method level generics here, because, you know, they only intention was to restrict an argument to be a subtype of some interface. And this can be achieved by just using proper signature. Note that as [Sergey Teplyakov](https://disqus.com/by/sergeyteplyakov/) mentioned in comment below, the latter makes
+sense if implementations of `IFoo` and `IBoo` structs. But in our particular case those were not (and I don't remember seeing structs being used in such a way).  
 
 Well, code does not longer look very smart, but good code should be simple, and not always smart.
 
