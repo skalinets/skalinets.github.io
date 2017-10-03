@@ -1,0 +1,1 @@
+post about appinsights and context tracking (https://docs.microsoft.com/en-us/azure/application-insights/app-insights-api-custom-events-metrics)
