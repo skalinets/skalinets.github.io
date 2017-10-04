@@ -27,12 +27,12 @@ error 2: {"Spatial types and functions are not available for this provider becau
 Sooo, I need to install some stuff to perform spatial calculations. That are sines and cosines as we remember. That's Microsoft's way,
 what can I say :)
 
-I tried to install it via chocolatey: https://chocolatey.org/packages/sql2016-clrtypes. But it still doesn't work. Maybe I need to reboot (typical next step
+I tried to install it via [chocolatey](https://chocolatey.org/packages/sql2016-clrtypes). But it still didn't work. Maybe reboot (typical next step
 when something is not properly working after installation on Windows)? No luck..
 
 [Here](https://stackoverflow.com/questions/43221467/assembly-microsoft-sqlserver-types-version-10-or-higher-could-not-be-found) some kind guy posted link to
-CLR types for SQL Server 2012 (!). After that install it started to work in console application, but apparently not in ASP.NET (where is a headbang emoji?).
+CLR types for SQL Server 2012 (!). After I had installed those it started to work in console application, but apparently not in ASP.NET (where is a headbang emoji?).
 
-It turned out that IIS should work in 32 bit mode. I found some SO comment (link is lost) saying that some x86 magic should be done with IIS. In my case it was IIS Express and I don't know how to enable 32bit applications there. But instead I just installed x86 version of SQL CLR types and it started to work.
+It turned out that IIS should work in 32 bit mode. I found some SO comment (link is lost) saying that some x86 magic should be done with IIS. In my case it was IIS Express and I didn't know how to enable 32bit applications there. Instead, I just installed x86 version of SQL CLR types and it started to work.
 
-But. It's not that trivial, as we can see. 
+So, the conclusion. You can use spatial queries with MS SQL and Entity Framework, but... It's not that trivial.
