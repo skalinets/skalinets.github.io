@@ -35,4 +35,8 @@ CLR types for SQL Server 2012 (!). After I had installed those it started to wor
 
 It turned out that IIS should work in 32 bit mode. I found some SO comment (link is lost) saying that some x86 magic should be done with IIS. In my case it was IIS Express and I didn't know how to enable 32bit applications there. Instead, I just installed x86 version of SQL CLR types and it started to work.
 
-So, the conclusion. You can use spatial queries with MS SQL and Entity Framework, but... It's not that trivial.
+{%highlight csharp%}
+.OrderBy(l => l.Address.Geocode.Distance(booking.Address.Geocode))
+{%endhighlight%}
+
+So, the conclusion: You can use spatial queries with MS SQL and Entity Framework, but... It's not that trivial.
