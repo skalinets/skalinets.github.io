@@ -2,7 +2,7 @@
 
 layout: post
 title: "Spatial Pain with Entity Framework"
-date: 2017-10-05 12:00 +02:00
+date: 2017-10-04 12:00 +02:00
 categories: EF .NET
 
 ---
