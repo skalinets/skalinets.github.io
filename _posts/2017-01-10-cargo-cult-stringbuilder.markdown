@@ -15,7 +15,8 @@ Even when it comes to join 2 (3, 4, 5, ...) literals or constants, they still us
 less effective, because such concatenations usually happen during compilation (constants are embedded into code as
 literals).
 
-But what about regular strings? Should one always use `StringBuilder`? I've prepared a small banchmark (source code
+But what about regular strings? Should one always use `StringBuilder`? I've prepared a small benchmark, using
+[BenchMarkDotNet](http://benchmarkdotnet.org/) (source code
 is available on [GitHub](https://github.com/skalinets/StringBuilderTest)) that shows that when the number of strings
 is less than 20, `StringBuilder` has no advantage over `+`. Even more, when number of items is less that 10, `+` has
 better performance. And this is exactly the most used scenario of string concatenation. If you have more than 10 items,
@@ -56,6 +57,6 @@ There is another, poor man's benchmark available on [dotnetfiddle.net](https://d
 but `+` always wins.
 
 Having that we can conclude that using `StringBuilder` to just concatenate a couple of strings is nothing but a [Cargo Cult](https://en.wikipedia.org/wiki/Cargo_cult).
-More code and less performance... 
+More code and less performance...
 
 Happy coding!
