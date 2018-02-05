@@ -40,3 +40,9 @@ performance than synchronous version. OK, but why?
 
 To answer this question one may want to recall how async work. Everyone knows that it creates a `Task` behind
 the scenes. The `Task` usually is executed in another thread, taken from the `ThreadPool`. The thread 
+
+
+Another thing: 
+await Task.Run(...; return xxx;)
+vs
+retrun Task.FromResult(...; return xxx;)
