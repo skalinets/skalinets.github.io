@@ -48,7 +48,7 @@ Result of `select-string` is an array of matched strings and it is processed her
 item.
 - `$_.Matches.Groups[1].Value` returns the content of group 1 or every matched string
 - `write-host` is aka `Console.Out.WriteLine`. Here it produces a [service message](https://confluence.jetbrains.com/display/TCD10/Build+Script+Interaction+with+TeamCity) 
-that [instructs] (https://confluence.jetbrains.com/display/TCD10/Build+Script+Interaction+with+TeamCity#BuildScriptInteractionwithTeamCity-changingBuildParameterAddingorChangingaBuildParameterfromaBuildStepAddingorChangingaBuildParameter)
+that [instructs](https://confluence.jetbrains.com/display/TCD10/Build+Script+Interaction+with+TeamCity#BuildScriptInteractionwithTeamCity-changingBuildParameterAddingorChangingaBuildParameterfromaBuildStepAddingorChangingaBuildParameter)
 Teamcity to create or update build parameter `ui.version` and set it's value to the found string.
 
 So we added a [Powershell build step](https://confluence.jetbrains.com/display/TCD10/PowerShell)
