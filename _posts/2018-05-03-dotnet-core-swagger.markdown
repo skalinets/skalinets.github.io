@@ -1,3 +1,8 @@
+---
+title: 'Swagger Tips for ASP.NET Core'
+---
+
+
 When you do HTTP API (you can call them REST or even RESTful, but you'd [probably be wrong](https://www.google.com.ua/search?q=your+api+is+not+restful)), it is nice to have a documentation. While Microsoft
 has [some home-brewed solution](https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages), and many .NET guys are OK with it, it is too far from being good.
 
