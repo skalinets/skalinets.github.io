@@ -22,4 +22,4 @@ LinguistActionLogs
 
 Exception thrown: 'System.NotSupportedException' in mscorlib.dll
 
-Additional information: A second operation started on this context before a previous asynchronous operation completed. Use 'await' to ensure that any asynchronous operations have completed before calling another method on this context. Any instance members are not guaranteed to be thread safe.
+Additional information: A second operation started on this context before a previous asynchronous operation completed. Use 'await' to ensure that any asynchronous operations have completed before calling another method on this context. Any instance members are not guaranteed to be thread safe.'
