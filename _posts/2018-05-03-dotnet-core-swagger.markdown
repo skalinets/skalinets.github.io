@@ -1,10 +1,10 @@
 When you do HTTP API (you can call them REST or even RESTful, but you'd [probably be wrong](https://www.google.com.ua/search?q=your+api+is+not+restful)), it is nice to have a documentation. While Microsoft
-has some home-brewed  solution, and many .NET guys are OK with it, it is too far from optimal.
+has [some home-brewed solution](https://docs.microsoft.com/en-us/aspnet/web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages), and many .NET guys are OK with it, it is too far from being good.
 
 Much better is [Swagger](https://swagger.io/). As it's site states, _Swagger is the world’s largest framework of 
 API developer tools for the OpenAPI Specification(OAS), enabling development across the entire API lifecycle, from design and documentation, to test and deployment._
 And that is true. It goes far beyond just documentation of your API, but still is very handy in that. It is well
-known and widely adopted. If your API has Swagger, almost any client can connect to it with minimum efforts.
+known and widely adopted. If your API has Swagger, almost any client can connect to it with minimal efforts.
 
 To use Swagger in .NET you need a [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore). Just 
 follow their readme and you'll get your API covered in minutes. I won't repeat it here, since documentation is rather good.
