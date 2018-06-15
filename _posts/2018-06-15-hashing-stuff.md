@@ -47,7 +47,8 @@ meaningless (they are anyway). It is supposed to be cryptographically secure and
 
 Blog post revealing this beast claims that it is used in ASP.NET Identity and
 I remember that hashing password is much easier. So the question: can we use
-famous [PasswordHasher<>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.passwordhasher-1?view=aspnetcore-2.1) for our simple purpose?
+famous [PasswordHasher<TUser>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.passwordhasher-1?view=aspnetcore-2.1) for our simple purpose? After all, it is parameterized with `User` type and we don't have any user here. But instead of
+speculating about something it is always easier just to try it.
 
 Here comes the code:
 
