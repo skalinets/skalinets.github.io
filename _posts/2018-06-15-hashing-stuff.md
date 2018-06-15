@@ -26,7 +26,8 @@ However this time it raised an exception:
     System.PlatformNotSupportedException: Operation is not supported on this platform.
       at System.Security.Cryptography.HashAlgorithm.Create(String hashName)
 
-Bummer. I tried to google it, found some huge discussion in [dotnet repo](https://github.com/dotnet/corefx/issues/22626), started to read it and. completely missed the workaround from the very first post :)
+Bummer. I tried to google it, found some huge discussion in [dotnet repo](https://github.com/dotnet/corefx/issues/22626), started to read it and... **completely missed the workaround from the very first post** :) But here is
+where the fun begins.
 
 Further readings brought me to [that](https://www.c-sharpcorner.com/article/hashing-in-asp-net-core-2-0/):
 
