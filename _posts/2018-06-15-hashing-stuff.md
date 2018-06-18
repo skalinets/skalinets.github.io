@@ -67,8 +67,10 @@ var r = new PasswordHasher<object>()
 var isTheSame = r == PasswordVerificationResult.Success;
 {% endhighlight%}
 
-However it is less attractive because of messing with `PasswordVerificationResult`. I'd rather compute hash again and compare it with
-a stored one.
+It is less attractive because of messing with `PasswordVerificationResult`. and one can ask "why not just compute the hash again and compare it with
+a stored one?". The answer is that `PasswordHasher<TUser>.HashPassword()` 
+produces different hash for the same input every time, and the only way to
+validate the hash is the `VerifyHashedPassword()` method.
 
 What do you think? :)
 
