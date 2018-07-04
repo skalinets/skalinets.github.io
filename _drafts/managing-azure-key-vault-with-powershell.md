@@ -65,3 +65,5 @@ citizen Key Vault support of certificates has not been supported by ARM yet.
 
 [install certificate as a Secret]
 
+Another issue is a format of certificate itself (https://peter.orneholm.com/post/155341445983/using-azure-key-vault-with-azure-web-apps-the).
+
