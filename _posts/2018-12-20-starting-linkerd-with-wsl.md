@@ -1,5 +1,5 @@
 ---
-title: Running Linkerd Dashboard from Windows System for Linux
+title: Starting Linkerd Dashboard from Windows System for Linux
 ---
 
 Linkerd is the first and probably the most famous service mash framework. It adds transparent proxies
