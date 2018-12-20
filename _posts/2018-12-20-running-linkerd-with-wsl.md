@@ -15,7 +15,7 @@ in minutes. However when I tried to open a dashboard, got this error:
 {% highlight bash %}
 Failed to open Linkerd URL http://127.0.0.1:64538/api/v1/namespaces/linkerd/services/linkerd-web:http/proxy/ 
 in the default browser: exec: "xdg-open": executable file not found in $PATH%
-{% highlight bash %}
+{% endhighlight %}
 
 
 It turned out that for some reason WSL (Windows Subsystem for Linux) does not support `xdg-open` command.
