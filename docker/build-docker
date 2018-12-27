@@ -1,0 +1,4 @@
+#!/bin/sh
+cp ../Gemfile* .
+cp  /c/Users/serhii.kalinets/Downloads/pl-ca-2-b64.crt . -f
+docker build -t jekyll-pl .
