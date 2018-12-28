@@ -15,12 +15,12 @@ gpg: keyserver receive failed: No dirmngr
 ```
 
 I started to google and didn't find anything specific during the first five minutes. Then I recalled
-[this post]({{ site.baseurl }}{% post_url 2018-09-05-one-line-fix %})), when I fisrt had spent some fair
+[this post]({{ site.baseurl }}{% post_url 2018-09-05-one-line-fix %}), when I fisrt had spent some fair
 amount of time to investigate the stuff and finally realized that there was a solution in vendor's KB.
 I scrolled down [installation instructions][1] and yes, it contained some relevant information. Unfortunately,
 it was not exactly my issue and didn't help too much.
 
-Further investigation have led me to the discussion of [WSL issue][3], where deeply in [comments][3] I
+Further investigation have led me to the discussion of [WSL issue][3], where deeply in [comments][2] I
 found the solution. Here it is:
 
 ```bash
