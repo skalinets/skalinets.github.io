@@ -1,5 +1,5 @@
 ---
-title: Emtpy Volumes in Docker for Windows  
+title: Empty Volumes in Docker for Windows  
 ---
 
 This post is going to be a short one, just it case it would be useful for someone.
@@ -24,6 +24,7 @@ the identity of current user to share drives with the docker daemon, so volumes 
 
 Long story short, I went to Docker settings, and re-connected my drive. After that everything started to work.
 And minute after that I found the [solution](https://github.com/docker/for-win/issues/25#issuecomment-433072448)
+in github issues.
 
 Also I recalled that I had another weird issue -- this time with Kafka running in Kubernetes. Messages were getting
 removed after docker / k8s restart. Sounds like the root cause was the same -- broken docker volumes because
