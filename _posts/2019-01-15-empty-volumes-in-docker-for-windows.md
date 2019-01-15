@@ -16,11 +16,17 @@ and Spark. Compared the spelling of my configuration flags with the docs. Spent 
 result. But then...
 
 I decided to check if volumes are still working. And noticed that for some reason in all volumes only
-folders are available from containers, but files are not. Have something broken in my Docker installation? I
+folders are available from containers, but files are not. I checked it with
+
+```bash
+docker run --rm -v $PWD:/data alpine ls /data/jobs
+```
+
+The output was empty, while `ls $PWD/jobs` listed files there. Have something broken in my Docker installation? I
 recalled that it had updated recently, so maybe there is some bug.
 
 And SUDDENLY I remembered that this morning I had changed my windows password. And Docker for Windows uses
-the identity of current user to share drives with the docker daemon, so volumes could be used. 
+the identity of current user to share drives with the docker daemon, so volumes could be used.
 
 Long story short, I went to Docker settings, and re-connected my drive. After that everything started to work.
 And minute after that I found the [solution](https://github.com/docker/for-win/issues/25#issuecomment-433072448)
