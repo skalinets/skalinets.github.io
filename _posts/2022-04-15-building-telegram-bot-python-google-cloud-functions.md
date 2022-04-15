@@ -3,9 +3,11 @@ title: Building Telegam Bot with Python and Google Cloud Functions
 ---
 
 Oookay, let’s build yet another telegram bot using python. I know there are
-quazillion of similar tutorials in internet, why bother with another one?
+quazillion of similar tutorials in internet, why bother with another one? Well,
+here we will cover builiding it from scratch, with fully automated deployment
+pipeline and it will run in the cloud.
 
-We will use the following technologies:
+We are going to use the following technologies:
 
 * **Language**: python. Because why not? I think that everyone should know
 python. And in this post I will provide with some guidance of how to start
