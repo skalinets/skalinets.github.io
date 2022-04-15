@@ -178,6 +178,7 @@ python-telegram-bot
 ``` python
 import os
 import telegram
+import requests
 
 
 def bot(request):
@@ -186,10 +187,13 @@ def bot(request):
         update = telegram.Update.de_json(request.get_json(force=True), bot)
         if update:
             chat_id = update.message.chat.id
-
             message = update.message.text
-            bot.sendMessage(chat_id=chat_id,
-                            text=f'got your request... you sent: {message}')
+            response = requests.get("https://meme-api.herokuapp.com/gimme")
+            if response.status_code == 200:
+                url = response.json()["url"]
+                bot.sendMessage(chat_id=chat_id,
+                                text=f"got your request... you sent: {message}\n"
+                                + f"here is your meme: {url}")
 
     return "this should never happen"
 ```
@@ -198,12 +202,15 @@ Here we defined a function `bot(request)` that is going to be invoked by Cloud
 Functions runtime. We create an instance of the `Bot` class, using the telegram
 token. Note that we don't hardcode that token, but read it from the environment
 variable, conforming to 12 Factor Apps Principles Then we check if the request
-is in fact *POST*, convert it to the `Update` type, get message, chat_id, and
-send reply back. Nothing fancy so far, but we are going to improve it later.
+is in fact *POST*, convert it to the `Update` type, get `message`, `chat_id`, and
+send reply back with the message and also a random meme from
+[Reddit](https://reddit.com) (kudos to the author of [this API][meme-api]).
+
+[meme-api]: https://github.com/D3vd/Meme_Api
 
 ## Automation
 
-However, before adding more features, we need to build a delivery pipeline. Of
+Before adding more features, we need to build a delivery pipeline. Of
 course it is possible to develop for Cloud Functions exclusively in the web UI,
 or copy & paste code from the editor to that UI, or even use [gcloud][gcloud]
 CLI tool to update the function definition from your machine, but all these are
@@ -273,3 +280,10 @@ a wonderful reason of why we should always strive to do the automation. Instead
 of running a deployment manually and then waiting until it is over during few
 minutes, we can push our changes and switch to something else.
 
+## Conclusion
+
+Ok, at this point we got a working bot with a delivery pipeline. Each change
+gets deployed within few minutes after it was pushed. In the next posts we will
+add more checks to ensure that our bot is not broken by some bug.
+
+Stay tuned!
