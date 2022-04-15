@@ -171,6 +171,7 @@ We need 2 files.
 
 ``` txt
 python-telegram-bot
+requests
 ```
 
 #### main.py
