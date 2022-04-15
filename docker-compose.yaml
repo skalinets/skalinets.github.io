@@ -12,5 +12,3 @@ services:
     command:
       - jekyll
       - serve
-  
-
