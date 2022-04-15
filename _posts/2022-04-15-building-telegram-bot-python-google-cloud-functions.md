@@ -201,11 +201,13 @@ def bot(request):
 Here we defined a function `bot(request)` that is going to be invoked by Cloud
 Functions runtime. We create an instance of the `Bot` class, using the telegram
 token. Note that we don't hardcode that token, but read it from the environment
-variable, conforming to 12 Factor Apps Principles Then we check if the request
-is in fact *POST*, convert it to the `Update` type, get `message`, `chat_id`, and
-send reply back with the message and also a random meme from
-[Reddit](https://reddit.com) (kudos to the author of [this API][meme-api]).
+variable, conforming to [12 Factor Apps][12-factors] principles.
+Then we check if the request is in fact *POST*, convert it to the `Update` type,
+get `message`, `chat_id`, and send reply back with the message and also a random
+meme from [Reddit](https://reddit.com) (kudos to the author of [this
+API][meme-api]).
 
+[12-factors]: [12-factors]
 [meme-api]: https://github.com/D3vd/Meme_Api
 
 ## Automation
