@@ -6,7 +6,21 @@ If you work with something like GitHub, you probably have a lot of local branche
 
 You can delete them one by one, of course, but if there are too many, just the thought of it can be a bit daunting. If you use a GUI, there might be a button to delete them, or you can select all and delete via `cmd-A`, or you can just resign yourself to the situation and write a comment like "they don't really bother me" before reading this post.
 
-In the case of the CLI, there are more options. I, for example, use the solution from ([Stack Overflow](https://stackoverflow.com/a/17029936/229949)). Of course, you could ask Chat GPT, but I prefer Stack Overflow because there are likes and comments from people for whom it worked. The command is long, but it can be copied and executed in a couple of seconds. After that, all branches really disappear (this somehow doesn't happen after `git fetch -p`, but I'm too lazy to dig it further).
+In the case of the CLI though, there are few more options. I, for example, use the solution from ([Stack Overflow](https://stackoverflow.com/a/17029936/229949)). Here is TL;DR; in case if SO got closed when you read this post :):
+
+``` bash 
+git fetch -p ; git branch -r \
+    | awk '{print $1}' \
+    | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) \
+    | awk '{print $1}' \
+    | xargs git branch -d
+```
+
+Of course, you could ask Chat GPT, but I prefer Stack Overflow because there are likes and comments from people for whom it worked. The command is long, but it can be copied and executed in a couple of seconds. After that, all branches really disappear (this somehow doesn't happen after `git fetch -p`, but I'm too lazy to dig it further).
+
+The only change I did to this script, was changing `-d` to `-D`, because git did not want to remove my branches.
+This is because we use squash commit strategy for merging our PRs (and I heavily advocate this approach to everyone). 
+And in this case branches are not considered "merged". 
 
 So, I did it this way and was satisfied with myself, started writing this post, and then suddenly remembered that I had one local branch where I was working on something intermittently but never created a PR or even pushed it to the server. Whether it was a feeling that it wasn't worth pushing, or I wanted to surprise my colleagues - I don't remember anymore. But the soulless script doesn't care about my concerns; it saw that the remote branch was missing and deleted it. Days of work vanished into thin air... Or did they?
 
