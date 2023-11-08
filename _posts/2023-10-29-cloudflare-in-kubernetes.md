@@ -1,6 +1,6 @@
-# # Setting Up a Cloudflare Tunnel with Kubernetes
-
-## Introduction
+---
+title: Setting up Cloudflare in Kubernetes Cluster
+---
 
 In modern cloud architectures, keeping services secure and fast is a top priority. Cloudflare Tunnel and Kubernetes can be combined to offer a robust, scalable, and secure solution. This blog post will guide you through the process of setting up a Cloudflare Tunnel for a Kubernetes cluster.
 
