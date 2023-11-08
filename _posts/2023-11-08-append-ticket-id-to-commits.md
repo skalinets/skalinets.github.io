@@ -39,9 +39,10 @@ chmod +x scripts/add-issue-id-to-commit-msg.sh
 Edit your `.pre-commit-config.yaml` file to include the script as a hook:
 
 ```yaml
--   repo: local
+repos:
+  - repo: local
     hooks:
-    -   id: append-issue-id
+      - id: append-issue-id
         name: Append issue ID to commit message
         entry: scripts/add-issue-id-to-commit-msg.sh
         language: script
