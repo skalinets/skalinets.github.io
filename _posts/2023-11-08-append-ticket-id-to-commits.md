@@ -6,12 +6,10 @@ If your workflow involves including ticket IDs in branch names and commit messag
 
 # Prerequisites:
 - Git
-- [pre-commit](https://pre-commit.com/) installed (If you don’t have it, install via `pip install pre-commit`, or `brew isntall pre-commit` or visit pre-commit for detailed instructions).
+- [pre-commit](https://pre-commit.com/) installed (If you don’t have it, install via `pip install pre-commit`, or `brew isntall pre-commit` or visit their site for detailed instructions).
 
 # Create the Hook Script
-In your repository, create a new directory to store your scripts, if you haven't already. Within this directory, create a new file named add-issue-id-to-commit-msg.sh.
-
-add-issue-id-to-commit-msg.sh:
+In your repository, create a new directory to store your scripts, if you haven't already. Within this directory, create a new file named `add-issue-id-to-commit-msg.sh`.
 
 ```bash
 #!/bin/sh
