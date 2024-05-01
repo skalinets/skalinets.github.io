@@ -11,7 +11,7 @@ If your workflow involves including ticket IDs in branch names and commit messag
 # Create the Hook Script
 In your repository, create a new directory to store your scripts, if you haven't already. Within this directory, create a new file named `add-issue-id-to-commit-msg.sh`.
 
-```bash
+``` bash
 #!/bin/sh
 
 # Extract the current branch name
