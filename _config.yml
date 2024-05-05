@@ -13,14 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 'Serhii Kalinets : Blog'
+title: "Serhii Kalinets : Blog"
 email: kalinets@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Let your code speak for you.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://skalinets.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: skalinets
-github_username:  skalinets
+github_username: skalinets
 disqus:
   shortname: skalinets-github-io
 google_analytics: UA-90284516-1
@@ -30,7 +30,6 @@ github:
 repository: skalinets/skalinets.github.io
 environment: production
 
-
 permalink: /:title.html
 
 # Build settings
@@ -38,6 +37,8 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-gist
+  - jekyll-include-cache
 exclude:
   - Gemfile
   - Gemfile.lock
